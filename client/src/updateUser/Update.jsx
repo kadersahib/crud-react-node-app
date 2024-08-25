@@ -16,13 +16,11 @@ const UpdateUser = ()=>{
 
       const inputhandler = (e)=>{
         const{name,value} = e.target;
-        console.log(name , value)
-
         setUser({...user, [name]: value,})
       }
 
       useEffect(() => {
-        const apiUrl = process.env.REACT_APP_API_URL;  // Retrieve API URL from environment variable
+        const apiUrl = process.env.REACT_APP_API_URL;
         axios.get(`${apiUrl}/user/${id}`)
             .then((response) => {
                 setUser(response.data);
@@ -42,7 +40,7 @@ const UpdateUser = ()=>{
             toast.success(response.data.message, { position: 'top-right' });
             navigate('/');
         } catch (error) {
-            const errorMessage = error.response?.data?.message || 'An error occurred';
+            const errorMessage = error.response.data.message || 'An error occurred';
             toast.error(errorMessage, { position: 'top-right' });
             console.log(error);
         }

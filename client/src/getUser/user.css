@@ -22,12 +22,12 @@
 .actionButton{
     margin: 0 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .btn-danger{
   margin-left: 10px;
 }
+
 .noDatas{
     margin-top: 20px;
     text-align: center;

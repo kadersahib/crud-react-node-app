@@ -19,7 +19,7 @@ function App() {
     },
   ]);
   return (
-    <div className="App">
+    <div className="Apps">
       <RouterProvider router={route}></RouterProvider>
     </div>
   );
